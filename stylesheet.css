@@ -1,0 +1,107 @@
+body {
+    /*background-color: lightcoral;*/
+    /*text-transform: uppercase;*/
+}
+
+section.container {
+    border: 10px solid black;
+    padding: 10px;
+    font-size: 20px;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .logo {
+            background-color: darkgray;
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+
+            a {
+                /*font-size: 15px;*/
+                background-color: lightgrey;
+                color: white;
+                border-radius: 5px;
+                padding: 10px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: darkgray;
+                }
+            }
+        }
+    }
+
+    section.hero {
+        img {
+            width: 100%;
+        }
+
+        &.bg-image {
+            height: 500px;
+            border: 5px solid orange;
+            background-image: url('sunset.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            div.content {
+                font-size: 60px;
+                color: white;
+            }
+        }
+    }
+
+    section.products {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 2px solid orange;
+        gap: 10px;
+
+        div.product {
+            /*padding: 10px;*/
+            border: 1px dashed blue;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Overrides for tablet and up*/
+@media screen and (min-width: 580px) {
+    section.container {
+        section.products {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .product {
+                width: 45%;
+            }
+        }
+    }
+}
+
+/*Overrides for desktop and up*/
+@media screen and (min-width: 1200px) {
+    section.container {
+        section.products {
+            .product {
+                width: 30%;
+            }
+        }
+    }
+}
